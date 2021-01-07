@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>OnCampus Victim Support UZ</title>
+<link rel="stylesheet" href="./css/form_and_stepper.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- multistep form -->
+<form class="well form-horizontal col-lg-8 col-md-12 col-sm-12 col-xs-12" id="msform" action="victimSupport.php" method="POST">
+  <!--VICTIM DETAILS-->
+  <fieldset>
+    <h2 class="fs-title text-primary">UZ Victim Support Service:</h2>
+    <div class="jumbotron text-primary" id="titleJumbotron">
+        Please note that Information Provided here is confidential and will never be disclosed
+    </div>
+    <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">First Name:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="fname" placeholder="Your First Name" class="form-control" type="text" autofocus></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label"> Surname:</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <input name="sname" placeholder="Your Surname" class="form-control" type="text" autofocus></div>
+          </div>
+         </div>
+         <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Position:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <select class="form-control" name="position">
+                 <option>Student</option>
+                 <option>Lecturer</option>
+                 <option>DACs Personnel</option>
+                 <option>Admin Personnel</option>
+                 <option>Works Personnel</option>
+                 <option>Other</option>
+               </select>
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Gender:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="">
+               Male: <input type="radio" name="gender" value="Male" class="">
+               Female: <input type="radio" name="gender" value="Female" class="">
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Email:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input id="state" name="email" placeholder="example@gmail.com" class="form-control"  type="email"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+          <input id="rPhone" name="phoneNumber" required placeholder="Your Phone Number" class="form-control" type="number">
+        </div>
+       </div>
+      </div>
+      <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Problem Description:</label>
+            <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 inputGroupContainer">
+      <div>
+        <textarea class="form-control" name="vsProblem" required rows="7" 
+        placeholder="Please provide all relevent information that can be used to assist you.The more Details the better"></textarea>
+      </div>
+      </div>
+      </div>
+      <div>
+        <input type="submit" name="vsSubmit" class="btn btn-md btn-primary" value="Send Information" style="float:right" />
+      </div>
+</fieldset>
+</form>
+
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script  src="./JS/reportCrime.js"></script>
+

@@ -1,0 +1,154 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css">
+<link rel="stylesheet" type="text/css" href="css/modalDefaultCssOveride.css" >
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target="#victimSupport">
+  Victim Support
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="victimSupport" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">UZ Victim Support Service</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+        There are people and groups who can help if you have been the victim of a crime.
+        They can help you when you report a crime, when you go to a hearing and after a trial.
+        Victim Support offer free help and support to victims of crime including:
+        Emotional support - for example, coping with the after-effects of crimes like Rape and Harrasment.
+        Practical help like getting locks changed at hostels. Advice on dealing with the police.
+        Help finding a counsellor. You can contact Victim Support even if the crime happened a long time
+         ago or you haven't reported it to the police.
+        Note that the information you provide will be mantained in confidentiality and in under no 
+        circumstances will it be disclosed or published. Feel free to tell our Expert team your problems.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                <span class="glyphicon glyphicon-thumbs-down"></span> Close</button>
+        <li><a href="victimSupport.html"><button type="button" class="btn btn-info">
+            <span class="glyphicon glyphicon-thumbs-up"></span> Seek Support</button>
+        </a></li>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal now
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-1">Launch
+  modal</button>
+
+<!-- Modal: modalPoll -->
+<div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Feedback request
+        </p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">×</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+          <p>
+            <strong>Your opinion matters</strong>
+          </p>
+          <p>Have some ideas how to improve our product?
+            <strong>Give us your feedback.</strong>
+          </p>
+        </div>
+
+        <hr>
+
+        <!-- Radio -->
+        <p class="text-center">
+          <strong>Your rating</strong>
+        </p>
+        <div class="form-check mb-4">
+          <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+          <label class="form-check-label" for="radio-179">Very good</label>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+          <label class="form-check-label" for="radio-279">Good</label>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" name="group1" type="radio" id="radio-379" value="option3">
+          <label class="form-check-label" for="radio-379">Mediocre</label>
+        </div>
+        <div class="form-check mb-4">
+          <input class="form-check-input" name="group1" type="radio" id="radio-479" value="option4">
+          <label class="form-check-label" for="radio-479">Bad</label>
+        </div>
+        <div class="form-check mb-4">
+          <input class="form-check-input" name="group1" type="radio" id="radio-579" value="option5">
+          <label class="form-check-label" for="radio-579">Very bad</label>
+        </div>
+        <!-- Radio -->
+
+        <p class="text-center">
+          <strong>What could we improve?</strong>
+        </p>
+        <!--Basic textarea-->
+        <div class="md-form">
+          <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+          <label for="form79textarea">Your message</label>
+        </div>
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-primary waves-effect waves-light">Send
+          <i class="fa fa-paper-plane ml-1"></i>
+        </a>
+        <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalPoll -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/js/bootstrap-modal.js"></script>

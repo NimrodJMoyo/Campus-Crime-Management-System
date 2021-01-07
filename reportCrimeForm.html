@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./css/form_and_stepper.css">
+</head>
+
+
+<body>
+
+
+<form class="well form-horizontal col-lg-8 col-md-12 col-sm-12 col-xs-12" id="msform"
+ action="reportCrime.php" method="POST"  autocomplete="on">
+  <!-- progressbar -->
+<ul autofocus id="progressbar">
+  <li class="active">Crime Details</li>
+  <li>Criminal Details</li>
+  <li>Reporter's info</li>
+  <li>Victim details & Upload Evidence</li>
+</ul>
+  <!-- fieldsets -->
+  <!--CRIME DETAILS-->
+  <fieldset>
+    <h2 class="fs-title text-primary">Crime Details</h2>
+
+    <div class="form-group">
+        <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Crime Type:</label>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+         <div class="input-group">
+            <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+            <select autofocus class="selectpicker form-control" name="crime_type" required>
+             <option value="Unspecified">Choose Crime Type</option>
+             <option>Laptop Theft</option>
+             <option>Drug Abuse</option>
+             <option>Rape</option>
+             <option>Arson</option>
+             <option>Corruption</option>
+             <option>Theft</option>
+             <option>Fighting</option>
+             <option>Other</option>
+             </select>
+         </div>
+        </div>
+       </div>
+        
+
+       <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Crime Description:</label>
+          <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <textarea auto focus name="crimeDescription" rows= "6" required
+             placeholder="Describe the details of the crime" class="form-control"type="text"></textarea></div>
+          </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Location of Occurance:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user">
+            </i></span><input autofocus name="crimeLocation" class="form-control" type="text"></div>
+            </div>
+           </div>
+
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Date of Occurance:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+          <input autofocus type="date" name="crimeDate" class="form-control"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Date of Report:</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            <select class="form-control" autofocus name="reportDate"><option><?php echo date("l-d-M-Y"); ?></option></select>
+          </div>
+          </div>
+      </div>
+  </fieldset>
+
+<!--CRIMINAL DETAILS-->
+  <fieldset>
+    <h2 class="fs-title text-primary">Criminal Details</h2>
+    <h3 class="fs-subtitle text-info">All known details of the perpetrator</h3>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Criminal's Name:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="cName" placeholder="Full Name" class="form-control" autofocus type="text" required></div>
+       </div>
+      </div>
+
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Position:</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <select class="form-control" name="cPosition">
+               <option value="student">Student</option>
+               <option value="lecturer">Lecturer</option>
+               <option value="dacs personnel">DACs Personnel</option>
+               <option value="security personnel">Security Personnel</option>
+               <option value="admin personnel">Admin Personnel</option>
+               <option value="works personnel">Works Personnel</option>
+               <option value="other">Other</option>
+             </select>
+            </div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Gender:</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="form-horizontal">
+             Male: <input type="radio" name="cGender" value="Male" class="">
+             Female: <input type="radio" name="cGender" value="Female" class="">
+            </div>
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Additional Description of the Criminal:</label>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+          <div>
+            <textarea class="form-control" rows="4" name="cDescription" placeholder="Other relevent Description of the Criminal, eg Reg Number,Program,Id Number et ceteris"></textarea>
+          </div>
+          </div>
+        </div>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Upload Picture:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+          <input name="cPicture" class="form-control" value="Upload picture if any" type="file">
+        </div>
+       </div>
+       </div>
+    
+  </fieldset>
+
+  <!--REPORTER DETAILS-->
+  <fieldset>
+    <h2 class="fs-title text-primary">Reporter's Details:</h2>
+    <h3 class="fs-subtitle text-info jumbotron text-center">
+      This step optional you may skip it
+      <div>
+      <article id="titleJumbotron">You may submit this report anonymously if you do not wish to provide a name or other identifying information
+        at this time. However, the nature of anonymous reports makes responsive actions more difficult and at times,
+         impossible.</article>
+        </div>
+     </div>
+    </h3>
+    <div>
+    
+
+       
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">First Name:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="rName" autofocus placeholder="Your Full Name" class="form-control" autofocus type="text"></div>
+       </div>
+      </div>
+
+         </div>
+         <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Position:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <select class="form-control" name="rPosition">
+                 <option>Student</option>
+                 <option>Lecturer</option>
+                 <option>DACs Personnel</option>
+                 <option>Security Personnel</option>
+                 <option>Admin Personnel</option>
+                 <option>Works Personnel</option>
+                 <option>Other</option>
+               </select>
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Gender:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="">
+               Male: <input type="radio" name="rGender" value="Male" autofocus class="">
+               Female: <input type="radio" name="rGender" value="Female" class="">
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Email:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input id="state" name="rEmail" placeholder="example@gmail.com" class="form-control"  type="email"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+          <input id="rPhone" name="rPhoneNumber" placeholder="Your Phone Number" class="form-control" type="number">
+        </div>
+       </div>
+      </div>
+      <article>
+        <h3>Witnesses</h3>
+        <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">1st Witness:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <input name="witness_1" placeholder="Enter Witness Full Name" class="form-control" type="text"></div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number:</label>
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                 <input id="rPhone" name="witness_1_no" placeholder="Phone Number" class="form-control" type="number">
+               </div>
+              </div>
+             </div>
+          <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">2nd Witness:</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <input name="witness_2" placeholder="Enter Witness Full Name" class="form-control" type="text"></div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number:</label>
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                 <input id="rPhone" name="witness_2_no" placeholder="Phone Number" class="form-control" type="number">
+               </div>
+              </div>
+             </div>
+      </article>
+  </fieldset>
+
+  <!--UPLOAD EVIDENCE-->
+  <fieldset>
+    <h2 class="fs-title text-primary">VICTIM DETAILS & UPLOAD EVIDENCE</h2>
+    <h3 class="fs-subtitle text-info">victim and supporting evidence:</h3>
+    <div class="form-group">
+      <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Victim Full Name:</label>
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+       <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+         <input name="vName" autofocus placeholder="Enter Victim Full Name" class="form-control" type="text"></div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number:</label>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+         <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+           <input id="rPhone" autofocus name="vPhone" placeholder="Phone Number" class="form-control" type="number">
+         </div>
+        </div>
+       </div>
+    <div>
+    <input type="file" autofocus name="evidence_1" value="evidence_1" autofocus/>
+    </div>
+    <div>
+    <input type="file" name="evidence_2" autofocus/>
+    </div>
+    <div>
+    <input type="file" name="evidence_3" autofocus />
+    </div>
+    <div>
+    <textarea class="form-control" name="evidenceDescription" rows="7" placeholder="Supporting information that has not been provided"></textarea>
+    </div>
+    <button type="submit" name="send_report" class="btn btn-lg btn-warning ">send report</button>
+  </fieldset>
+  
+</form>
+
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+
+
+</body>
+</html>
+

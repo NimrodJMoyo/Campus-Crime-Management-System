@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./Rstepper.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Crime Details</li>
+    <li>Criminal Details</li>
+    <li>Details's Details</li>
+    <li>Upload Evidence</li>
+  </ul>
+  <!-- fieldsets -->
+
+  <!--CRIME DETAILS-->
+  <fieldset>
+    <h2 class="fs-title">Crime Details</h2> 
+
+    <div class="form-group">
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+         <div class="input-group">
+            <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+            <select class="selectpicker form-control">
+             <option>Choose Crime Type</option>
+             <option>Laptop Theft</option>
+             <option>Drug Abuse</option>
+             <option>Rape</option>
+             <option>Arson</option>
+             <option>Corruption</option>
+             <option>Theft</option>
+             <option>Fighting</option>
+             <option>Other</option>
+             </select>
+         </div>
+        </div>
+       </div>
+        
+
+       <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Crime Discription</label>
+          <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span><textarea name="crimDiscription" rows= "6" placeholder="Describe the details of the crime" class="form-control" required="true" type="text"></textarea></div>
+          </div>
+         </div>
+
+         <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Location of Occurance</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input name="crimeLocation" class="form-control" type="text"></div>
+            </div>
+           </div>
+
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Date of Occurance:</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span><input type="date" name="crimeDate" class="form-control"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Date of Occurance:</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+            <select><option><?php echo "Today is " . date("l-d-M-Y") . "<br>"; ?></option></select>
+          </div>
+          </div>
+      </div>
+
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+<!--CRIMINAL DETAILS-->
+  <fieldset>
+    <h2 class="fs-title">Criminal Details</h2>
+    <h3 class="fs-subtitle">All known details of the perpetrator</h3>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Perpetrator's Name</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="cfName" placeholder="First Name" class="form-control" required="true" value="" type="text"></div>
+       </div>
+      </div>
+     
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Surname</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <input name="csName" placeholder="Surname" class="form-control" required="true" value="" type="text"></div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Faculty</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <select class="form-control" name="cFaculty">
+               <option>Arts</option>
+               <option>Commerce</option>
+               <option>College of Health</option>
+               <option>Computer Science</option>
+               <option>Law</option>
+               <option>Science</option>
+               <option>Social Studies</option>
+             </select>
+            </div>
+          </div>
+      </div>
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Position</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <select class="form-control" name="cFaculty">
+               <option>Student</option>
+               <option>Lecturer</option>
+               <option>DACs Personnel</option>
+               <option>Security Personnel</option>
+               <option>Admin Personnel</option>
+               <option>Works Personnel</option>
+               <option>Other</option>
+             </select>
+            </div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Gender</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             Male: <input type="radio" name="cGender" value="Male" class="form-control" type="text">
+             Female: <input type="radio" name="cGender" value="Female" class="form-control">
+            </div>
+          </div>
+      </div>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Upload Picture</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+          <input id="state" name="cPicture" placeholder="State/Province/Region" class="form-control" value="Upload picture if any" type="file">
+        </div>
+       </div>
+       </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+  <!--REPORTER DETAILS-->
+  <fieldset>
+    <h2 class="fs-title">Reporter's Details</h2>
+    <h3 class="fs-subtitle">This is optional</h3>
+    <container>You may submit this report anonymously if you do not wish to provide a name or other identifying information
+       at this time. However, the nature of anonymous reports makes responsive actions more difficult and at times,
+        impossible.</container>
+
+       
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">First Name</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input name="rfName" placeholder="Your First Name" class="form-control" type="text"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label"> Surname</label>
+          <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <input name="rsName" placeholder="Your Surname" class="form-control" type="text"></div>
+          </div>
+         </div>
+         <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Position</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <select class="form-control" name="cFaculty">
+                 <option>Student</option>
+                 <option>Lecturer</option>
+                 <option>DACs Personnel</option>
+                 <option>Security Personnel</option>
+                 <option>Admin Personnel</option>
+                 <option>Works Personnel</option>
+                 <option>Other</option>
+               </select>
+              </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Gender</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               Male: <input type="radio" name="rGender" value="Male" class="form-control" type="text">
+               Female: <input type="radio" name="rGender" value="Female" class="form-control">
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Email</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input id="state" name="rEmail" placeholder="example@gmail.com" class="form-control"  type="email"></div>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number</label>
+       <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+          <input id="rPhone" name="phoneNumber" placeholder="Your Phone Number" class="form-control" type="number">
+        </div>
+       </div>
+      </div>
+      <article>
+        <h3>Witnesses</h3>
+        <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">1st Witness</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <input name="wName" placeholder="Enter Witness Full Name" class="form-control" type="text"></div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number</label>
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                 <input id="rPhone" name="wNumber" placeholder="Phone Number" class="form-control" type="number">
+               </div>
+              </div>
+             </div>
+          <div class="form-group">
+            <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">2nd Witness</label>
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+             <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+               <input name="wName" placeholder="Enter Witness Full Name" class="form-control" type="text"></div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-lg-3 col-md-4 col-sm-4 col-xs-6 control-label">Phone Number</label>
+              <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 inputGroupContainer">
+               <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                 <input id="rPhone" name="wNumber" placeholder="Phone Number" class="form-control" type="number">
+               </div>
+              </div>
+             </div>
+      </article>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
+  <!--UPLOAD EVIDENCE-->
+  <fieldset>
+    <h2 class="fs-title">UPLOAD EVIDENCE</h2>
+    <h3 class="fs-subtitle">Supporting evidence</h3>
+    <div>
+    <input type="file" name="evidence_1" value="evidence_1" placeholder="First Name" />
+    </div>
+    <div>
+    <input type="file" name="evidence_2" placeholder="Last Name" />
+    </div>
+    <div>
+    <input type="file" name="evidence_3" placeholder="Phone" />
+    </div>
+    <div>
+    <textarea name="address" placeholder="Supporting Details"></textarea>
+    </div>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </fieldset>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script  src="./reportCrime.js"></script>
+
+</body>
+</html>

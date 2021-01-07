@@ -1,0 +1,38 @@
+<head>
+	<link rel="stylesheet" a href="css\style2.css">
+    
+</head>
+<body class="crimewords">
+	<div class="container sign">
+	<img src="images/user.png"/>
+		<form action="signUp.php" method="POST" id="nim_form">
+            <div>
+                <?php include("errors.php"); ?>
+            </div>
+		<div class="form-input">
+        <input type="text" name="fname" value="<?php echo $fname; ?>" placeholder="Name" autofocus/>
+        <input type="text" name="sname" value="<?php echo $sname; ?>" placeholder="Surname" autofocus/>
+        </div>
+        <div>
+        <select name="position" value = "<?php echo $position; ?>">
+            <option value="position" > Choose Position</option>
+            <option value="student">Student</option>
+            <option value="staff">Staff</option>
+            <option value="Security">Security</option>
+        </select>
+        <input type="password" name="password_1" placeholder="password" autofocus/>
+        <input type="password" name="password_2" placeholder="confirm password" autofocus/>
+        <input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email" autofocus/>
+        <input type="text" name="username" value="<?php echo $username; ?>" placeholder="Reg Number/Ec Number" autofocus/>
+        </div>
+        <br> 
+		<input class="btn btn-lg btn-primary" name="signUp" type="submit" value="Sign Up" class="btn-login"/>
+        </form>
+        
+        <div class="alert alert-info login-alert">  
+            <strong>Already a member?<a href="login.php"> Login </a> now</strong>
+        </div> 
+    </div>
+    
+</body>
+</html

@@ -1,0 +1,30 @@
+<head>
+	<link rel="stylesheet" a href="css\style2.css">
+</head>
+<body class="crimeBg">
+	<div class="container sign">
+	<img src="images/user.png"/>
+		<form action="login.php" method="POST" id="nim_form">
+			<div>
+				<?php include("errors.php"); ?>
+			</div>
+		<div class="form-input">
+		<input type="text" name="username" value="<?php echo $username; ?>" placeholder="Reg Number" autofocus/>	
+		</div>
+		<div class="form-input">
+		<input type="password" name="user_password" placeholder="password" autofocus/>
+		</div>
+		<div>
+			<br>
+		<input class="btn btn-lg btn-primary" name="login" type="submit" value="LOGIN"/>
+		</div>
+        </form>
+        
+        <div class="alert alert-info login-alert">  
+            <strong class="text-info">Not yet Registered? <a href="signup.php">Sign Up </a> now</strong>
+        </div> 
+	</div>
+</body>
+<div>
+</div>
+</html
